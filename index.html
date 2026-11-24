@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Para Damaris 💌</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Mali:ital,wght@0,400;0,500;0,600;1,500&family=Sniglet:wght@400;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="fondo" aria-hidden="true"></div>
+  <div id="cielo"></div>
+
+  <main id="escena">
+    <img class="deco deco-1" src="img/gato-corazon.png" alt="" />
+    <img class="deco deco-2" src="img/frasco-corazones.png" alt="" />
+    <img class="deco deco-3" src="img/gatos-novios.png" alt="" />
+    <img class="deco deco-4" src="img/corazon-rojo.png" alt="" />
+
+    <header class="encabezado">
+      <p class="pre">un regalito para</p>
+      <h1>Damaris <span class="latido">💗</span></h1>
+      <p id="subtitulo">Toca la cajita para abrirla ✨</p>
+    </header>
+
+    <!-- La cajita de regalo -->
+    <div id="caja" class="caja" role="button" tabindex="0" aria-label="Abrir la cajita">
+      <div class="caja-tapa"><div class="lazo"><span></span><span></span></div></div>
+      <div class="caja-cuerpo"><div class="cinta-v"></div></div>
+      <img class="caja-sticker" src="img/gato-flor.png" alt="" />
+      <div class="caja-brillo"></div>
+    </div>
+
+    <!-- Progreso -->
+    <div id="progreso" class="progreso">
+      <div class="barra"><div id="barra-relleno" class="barra-relleno"></div><span id="barra-corazon" class="barra-corazon">💗</span></div>
+      <p id="contador" class="contador"></p>
+    </div>
+
+    <!-- Aquí aparecen las cartas -->
+    <section id="cartas" class="cartas" aria-label="Cartas"></section>
+  </main>
+
+  <!-- Ventana de retos -->
+  <div id="reto" class="modal" aria-hidden="true">
+    <div class="modal-fondo"></div>
+    <div class="reto-caja">
+      <button class="cerrar" data-cerrar aria-label="Cerrar">×</button>
+      <p id="reto-etiqueta" class="reto-etiqueta"></p>
+      <h2 id="reto-titulo"></h2>
+      <div id="reto-cuerpo" class="reto-cuerpo"></div>
+      <p id="reto-msg" class="reto-msg"></p>
+    </div>
+  </div>
+
+  <!-- Ventana donde se lee la carta -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-fondo"></div>
+    <article id="papel" class="papel">
+      <button class="cerrar" data-cerrar aria-label="Cerrar">×</button>
+      <div id="papel-stickers"></div>
+      <img id="papel-imagen" class="papel-imagen" alt="" />
+      <h2 id="papel-titulo"></h2>
+      <div id="papel-texto" class="papel-texto"></div>
+      <p id="papel-firma" class="papel-firma"></p>
+    </article>
+  </div>
+
+  <button id="musica" class="musica" aria-label="Música">♫</button>
+  <div id="particulas" aria-hidden="true"></div>
+
+  <script src="poemas.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
